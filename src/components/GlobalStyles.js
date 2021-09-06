@@ -10,6 +10,12 @@ html{
     &::-webkit-scrollbar{
         width:0.5rem
     }
+    &::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+  }
+  &::-webkit-scrollbar-track {
+    background: white;
+  }
 }
 
 body{
@@ -34,6 +40,10 @@ h3 {
   }
   a{
       text-decoration: none;
+      color: white;
+  }
+  img{
+    display:block;
   }
 `;
 

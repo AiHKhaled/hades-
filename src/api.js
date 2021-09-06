@@ -25,15 +25,17 @@ const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 const popularGames = `dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`;
-const upcomingGames = `date=${currentDate},${nextYear}&ordering=added&page_size=10`;
+const upcomingGames = `dates=${currentDate},${nextYear}&ordering=added&page_size=10`;
 const newGames = `dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 export const popularGamesURL = () => `${base_url}${popularGames}`;
 export const upcomingGamesURL = () => `${base_url}${upcomingGames}`;
 export const newGamesURL = () => `${base_url}${newGames}`;
-export const gameDetailURL = (game_id) =>
-  `https://api.rawg.io/api/games/${game_id}?key=df2c4e7f4b1b491983ba7de7a0bd7246`;
 
-export const gameScreenshotURL = (game_id) =>
-  `https://api.rawg.io/api/games/${game_id}/screenshots?key=df2c4e7f4b1b491983ba7de7a0bd7246`;
+export const gameDetailURL = (id) =>
+  `https://api.rawg.io/api/games/${id}?key=df2c4e7f4b1b491983ba7de7a0bd7246`;
+//const gameDetailURL = (game_id) => `${base_url}games/${game_id}`;
 
-//console.log(gameScreenshotURL(251509));
+export const gameScreenshotURL = (id) =>
+  `https://api.rawg.io/api/games/${id}/screenshots?key=df2c4e7f4b1b491983ba7de7a0bd7246`;
+
+console.log(gameDetailURL());

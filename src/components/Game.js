@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
 import { Link } from "react-router-dom";
 import { smallImage } from "../util";
+
 const Game = ({ name, released, image, id }) => {
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
@@ -25,13 +26,19 @@ const Game = ({ name, released, image, id }) => {
   );
 };
 const StyledGame = styled(motion.div)`
+  background-color: rgba(102, 202, 233, 0.72);
   min-height: 30vh;
   box-shadow: 0px 5px 30px rgba(255, 255, 255, 0.1);
   text-align: center;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
-
+  h3 {
+    color: black;
+  }
+  p {
+    color: black;
+  }
   img {
     width: 100%;
     height: 40vh;

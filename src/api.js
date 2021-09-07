@@ -38,4 +38,5 @@ export const gameDetailURL = (id) =>
 export const gameScreenshotURL = (id) =>
   `https://api.rawg.io/api/games/${id}/screenshots?key=df2c4e7f4b1b491983ba7de7a0bd7246`;
 
-console.log(gameDetailURL());
+export const searchGamesURL = (game_name) =>
+  `https://api.rawg.io/api/games/${game_name}?key=df2c4e7f4b1b491983ba7de7a0bd7246&page_size=9`;

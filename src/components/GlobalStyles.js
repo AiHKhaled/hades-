@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    background: #1b1b1b;
+    background: #0c0c0c;
     color: white;
     font-family: 'Nunito', sans-serif;
     width: 100%;
